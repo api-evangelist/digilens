@@ -1,0 +1,86 @@
+generated: '2026-08-01'
+method: probed
+source: https://www.digilens.com/
+summary: >-
+  No /.well-known/ resources are published on any DigiLens host. digilens.com and
+  www.digilens.com return 404 for every probed path. developer.digilens.com sits
+  behind a Cloudflare interstitial that returns 403 to non-browser clients, so
+  those paths are recorded as blocked rather than absent.
+probes:
+  - host: www.digilens.com
+    results:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /llms.txt
+        status: 404
+      - path: /openapi.json
+        status: 404
+      - path: /swagger.json
+        status: 404
+  - host: digilens.com
+    results:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /llms.txt
+        status: 404
+  - host: developer.digilens.com
+    note: >-
+      Cloudflare challenge ("Just a moment...") returned 403 for every path,
+      including with a browser User-Agent. Absence cannot be confirmed for this
+      host.
+    results:
+      - path: /.well-known/security.txt
+        status: 403
+        blocked: cloudflare
+      - path: /.well-known/agent-card.json
+        status: 403
+        blocked: cloudflare
+      - path: /.well-known/agent.json
+        status: 403
+        blocked: cloudflare
+      - path: /.well-known/openid-configuration
+        status: 403
+        blocked: cloudflare
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+        blocked: cloudflare
+      - path: /.well-known/api-catalog
+        status: 403
+        blocked: cloudflare
+      - path: /llms.txt
+        status: 403
+        blocked: cloudflare
+      - path: /openapi.json
+        status: 403
+        blocked: cloudflare
+      - path: /api/v2/help_center/en-us/articles.json
+        status: 401
+        note: >-
+          Zendesk Help Center API responded "Couldn't authenticate you" — the
+          developer portal is a Zendesk Guide instance with its public API
+          disabled/restricted.
+files: []

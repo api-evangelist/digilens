@@ -1,0 +1,98 @@
+# DigiLens
+
+> DigiLens Inc. designs and manufactures holographic waveguide optics and augmented
+> reality display systems for extended reality (XR), and ships ARGO, a standalone
+> rugged enterprise AR headset running DigiOS. DigiLens publishes no public web API;
+> its developer surface is a device SDK (DigiOS SDK) for Android and Unity, plus
+> sample projects on GitHub and a gated developer portal.
+
+generated: 2026-08-01
+method: generated
+source: apis.yml + repo artifacts (no provider-published /llms.txt found)
+
+## What DigiLens sells
+
+- Crystal Waveguides — diffractive waveguide optical components made with a proprietary
+  photopolymer material set, inkjet printing and holographic contact copy rather than
+  etching. Supplied to partners including Samsung, Corning, Panasonic, Sony, Continental,
+  Mitsubishi Chemical, UDC and Goertek for smartglasses, automotive AR head-up displays,
+  smart helmets and avionics head-up guidance systems.
+- ARGO — an all-in-one, rugged, standalone enterprise AR headset on the Qualcomm
+  Snapdragon XR2 platform, Snapdragon Spaces Ready, certified for Microsoft Intune MDM.
+- DigiOS — DigiLens' AOSP Android 12 operating system for ARGO, with voice UI, gaze and
+  scroll-wheel interaction, projector control, OpenXR and WebXR support, and OTA updates.
+- DigiSaaS — DigiLens' partner software ecosystem for ARGO (Manifest, Oculum, RemoteSpark,
+  Altoura and others).
+
+## Developer surface
+
+- Developer portal: https://developer.digilens.com/ (Zendesk help center; DigiOS SDKs,
+  OTA builds, APIs and how-to guides. Access is gated — anonymous clients receive a
+  Cloudflare challenge.)
+- DigiOS Interactions Guide: https://developer.digilens.com/hc/en-us/articles/32357557307931-DigiOS-Interactions-Guide
+- DigiOS VoiceUI overview: https://developer.digilens.com/hc/en-us/articles/19931447980827-DigiOS-VoiceUI
+- Developing for Snapdragon Spaces 1.0.1: https://developer.digilens.com/hc/en-us/articles/36241428293659-Developing-for-Snapdragon-Spaces-1-0-1
+- GitHub organization: https://github.com/digilens-ar
+
+## How you build for ARGO
+
+Two supported paths, both native to the device rather than over a network API:
+
+1. Unity (recommended) — Unity 2022.3.45f1 (some samples 2021.3+), plus the Qualcomm
+   Snapdragon Spaces Unity SDK (v1.0.1 / v1.0.0 / v24) obtained from Qualcomm's Snapdragon
+   Spaces support team, plus the QCHT hand-tracking package. Build for Android, deploy to
+   ARGO.
+2. Android Studio — Java/Kotlin against DigiOS head-worn Android APIs and the DigiOS SDK
+   (projector/display mode control, IMU sensors, DigiOS-VoiceUI service, native
+   stereoscopic 3D). Install with `adb install`.
+
+Each sample declares a minimum DigiOS build (for example B1.0001.2098, B1.0001.2116,
+B1.0001.2145) alongside its Unity and Spaces SDK versions — that triple is the real
+compatibility contract.
+
+## First-party sample projects
+
+- Unity-interactions-sample — scroll-wheel interaction and Voice UI scenes.
+- VoiceUI-sample — Android integration with the DigiOS-VoiceUI service.
+- Gaze-Interaction-Sample — AR setup with Snapdragon Spaces.
+- Instructions-App — Unity app with QCHT hand-tracking interactions.
+- MRTK3-Sample, Spaces-v24-Sample, Spaces-v1.0.1-Sample — Unity/Spaces starters.
+- AndroidS3DSample — native stereoscopic 3D on ARGO.
+- AndroidStatusDisplay / AndroidStatusDisplayLDGreen / UnityStatusDisplay — IMU-driven
+  projector control with a clock HUD.
+
+## What DigiLens does NOT publish
+
+- No public HTTP/REST API, no OpenAPI or Swagger definition, no GraphQL endpoint.
+- No AsyncAPI, webhooks or event stream.
+- No MCP server and no A2A agent card (/.well-known/agent-card.json and
+  /.well-known/agent.json return 404 on digilens.com and www.digilens.com).
+- No /.well-known/ resources of any kind, including security.txt.
+- No public status page, dated changelog, SLA or deprecation policy.
+- No client library on npm, PyPI, Maven Central, NuGet, pkg.go.dev, RubyGems, Packagist
+  or crates.io.
+- No published security-compliance certification (SOC 2, ISO 27001, HIPAA, FedRAMP).
+
+## Company
+
+- Headquarters: Sunnyvale, California, USA
+- Founder: Jonathan Waldern; CEO: Chris Pickett
+- Funding: Series D led by Samsung Electronics, valuing DigiLens above $500M (second
+  close April 2022, >$530M), with Samsung Electro-Mechanics, Diamond Edge Ventures
+  (Mitsubishi Chemical), Alsop Louie Partners, 37 Interactive Entertainment, UDC Ventures
+  and Dolby Family Ventures participating.
+
+## Links
+
+- Website: https://www.digilens.com/
+- ARGO: https://www.digilens.com/argo/
+- Waveguides: https://www.digilens.com/waveguides/
+- Media center: https://www.digilens.com/media/
+- News feed (RSS): https://www.digilens.com/feed/
+- Contact: https://www.digilens.com/contact/
+- Careers: https://www.digilens.com/careers/
+- Terms of use: https://www.digilens.com/terms-of-use/
+- ARGO terms of use: https://www.digilens.com/argo/terms-of-use/
+- Privacy policy: https://www.digilens.com/privacy-policy/
+- LinkedIn: https://www.linkedin.com/company/digilensinc/
+- YouTube: https://www.youtube.com/@DigiLensInc

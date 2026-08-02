@@ -1,0 +1,124 @@
+generated: '2026-08-01'
+method: searched
+source: https://developer.digilens.com/
+name: DigiLens packages and SDKs
+summary: >-
+  DigiLens ships a first-party device SDK (the DigiOS SDK) for its ARGO AR
+  smartglasses, distributed through the DigiLens developer portal rather than a
+  public package registry. No DigiLens package was found on npm, PyPI, Maven
+  Central, NuGet, pkg.go.dev, RubyGems, Packagist or crates.io. Application
+  development for ARGO targets Unity (C#) or Android Studio (Java/Kotlin) on top
+  of the DigiOS SDK plus Qualcomm's Snapdragon Spaces OpenXR SDK, with
+  first-party sample projects published in the digilens-ar GitHub organization.
+
+registry_search:
+  date: '2026-08-01'
+  query: digilens
+  results:
+    - registry: npm
+      url: https://registry.npmjs.org/-/v1/search?text=digilens
+      matches: 0
+    - registry: pypi
+      url: https://pypi.org/pypi/digilens/json
+      http_status: 404
+      matches: 0
+    - registry: maven-central
+      url: https://search.maven.org/solrsearch/select?q=digilens
+      matches: 0
+    - registry: nuget
+      url: https://azuresearch-usnc.nuget.org/query?q=digilens
+      matches: 0
+
+packages:
+  - name: DigiOS SDK
+    language: java
+    platform: android
+    official: true
+    registry: none
+    distribution: developer-portal
+    gated: true
+    url: https://developer.digilens.com/
+    description: >-
+      First-party device SDK for DigiOS, the Android-based operating system on
+      DigiLens ARGO smartglasses. Exposes device capabilities such as projector
+      (display) mode control, IMU/sensor access, voice UI service integration and
+      native stereoscopic 3D rendering. Distributed to partners and customers via
+      the DigiLens developer portal alongside DigiOS OTA builds; not published to
+      a public package registry.
+    x-evidence:
+      - url: https://github.com/digilens-ar/AndroidStatusDisplay
+        quote: >-
+          "It uses the DigiOS SDK to switch projector modes safely and reliably."
+      - url: https://www.digilens.com/pr-msftintune/
+        note: >-
+          DigiLens states the developer portal provides access to DigiOS SDKs,
+          OTAs and APIs for partners and customers building spatial solutions for
+          ARGO.
+
+dependencies:
+  - name: Snapdragon Spaces Unity SDK
+    vendor: Qualcomm
+    official: false
+    required_for: Unity XR development on ARGO
+    url: https://spaces.qualcomm.com/
+    note: >-
+      Third-party (Qualcomm) OpenXR runtime SDK that ARGO Unity development
+      depends on. Access is requested from the Snapdragon Spaces support team,
+      not from DigiLens.
+    versions_referenced:
+      - v1.0.1
+      - v1.0.0
+      - v24 (v0.24.0)
+
+samples:
+  source: https://github.com/digilens-ar
+  note: >-
+    First-party sample applications, not redistributable client libraries. Listed
+    here because they are the only publicly downloadable DigiLens developer code.
+  repositories:
+    - name: Unity-interactions-sample
+      language: csharp
+      url: https://github.com/digilens-ar/Unity-interactions-sample
+      description: Unity sample showing scroll-wheel interaction and Voice UI on ARGO.
+    - name: VoiceUI-sample
+      language: java
+      url: https://github.com/digilens-ar/VoiceUI-sample
+      description: Android sample showing best practices for the DigiOS-VoiceUI service.
+    - name: Gaze-Interaction-Sample
+      language: csharp
+      url: https://github.com/digilens-ar/Gaze-Interaction-Sample
+      description: Unity sample for AR development with Snapdragon Spaces on ARGO.
+    - name: Instructions-App
+      language: csharp
+      url: https://github.com/digilens-ar/Instructions-App
+      description: Unity app for Snapdragon Spaces devices including QCHT hand-tracking.
+    - name: MRTK3-Sample
+      language: csharp
+      url: https://github.com/digilens-ar/MRTK3-Sample
+    - name: Spaces-v24-Sample
+      language: csharp
+      url: https://github.com/digilens-ar/Spaces-v24-Sample
+    - name: Spaces-v1.0.1-Sample
+      language: csharp
+      url: https://github.com/digilens-ar/Spaces-v1.0.1-Sample
+    - name: AndroidS3DSample
+      language: java
+      url: https://github.com/digilens-ar/AndroidS3DSample
+      description: Native stereoscopic 3D on DigiLens ARGO.
+    - name: AndroidStatusDisplay
+      language: kotlin
+      url: https://github.com/digilens-ar/AndroidStatusDisplay
+      description: IMU-driven projector control with a clock HUD.
+    - name: AndroidStatusDisplayLDGreen
+      language: kotlin
+      url: https://github.com/digilens-ar/AndroidStatusDisplayLDGreen
+    - name: UnityStatusDisplay
+      language: csharp
+      url: https://github.com/digilens-ar/UnityStatusDisplay
+
+gaps:
+  - No DigiLens client library is published to any public package registry.
+  - >-
+    DigiOS SDK download, versioning and API reference sit behind the developer
+    portal (Zendesk help center, Cloudflare-protected), so the SDK surface cannot
+    be verified anonymously.

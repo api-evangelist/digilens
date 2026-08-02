@@ -1,7 +1,19 @@
 aid: digilens
 name: DigiLens
-description: 'DigiLens is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'DigiLens Inc. is a Sunnyvale, California company that designs and manufactures
+  holographic waveguide optics and augmented reality display systems for extended reality
+  (XR). Its Crystal Waveguides are produced with a proprietary photopolymer material
+  set, inkjet printing and a holographic contact-copy process rather than etching, and
+  are supplied to partners including Samsung, Corning, Panasonic, Sony, Continental,
+  Mitsubishi Chemical and Goertek for smartglasses, automotive head-up displays, smart
+  helmets and avionics head-up guidance. DigiLens also ships ARGO, a standalone, rugged
+  enterprise AR headset running DigiOS — an Android-based operating system with voice
+  UI, gaze and scroll-wheel interaction, projector control and Microsoft Intune MDM
+  certification. Developers build for ARGO in Unity or Android Studio on top of the
+  DigiOS SDK and Qualcomm Snapdragon Spaces, with samples published in the digilens-ar
+  GitHub organization and documentation on the DigiLens developer portal. DigiLens has
+  raised a Series D led by Samsung Electronics at a valuation above $500M.'
+image: https://www.digilens.com/wp-content/uploads/2021/03/LRG-Logo-White-Full-MAR21-207x39.png
 url: https://raw.githubusercontent.com/api-evangelist/digilens/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +24,16 @@ created: '2026-08-01'
 modified: '2026-08-01'
 tags:
 - Company
+- Augmented Reality
+- Extended Reality
+- Smart Glasses
+- Wearables
+- Optics
+- Displays
+- Hardware
+- Automotive
+- Enterprise Software
+- SDK
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +41,45 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/digilens-domain-security.yml
 - type: Website
+  url: https://www.digilens.com/
+- type: DeveloperPortal
+  url: https://developer.digilens.com/
+- type: Documentation
+  url: https://developer.digilens.com/hc/en-us
+- type: GettingStarted
+  url: https://developer.digilens.com/hc/en-us/articles/32357557307931-DigiOS-Interactions-Guide
+- type: GitHubOrganization
+  url: https://github.com/digilens-ar
+- type: Blog
+  url: https://www.digilens.com/media/
+- type: BlogRSS
+  url: https://www.digilens.com/feed/
+- type: Support
+  url: https://www.digilens.com/contact/
+- type: TermsOfService
+  url: https://www.digilens.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.digilens.com/privacy-policy/
+- type: Product
+  url: https://www.digilens.com/argo/
+- type: SecondaryMarket
   url: https://forgeglobal.com/digilens_stock/
+- type: Packages
+  url: packages/digilens-packages.yml
+- type: SDKs
+  url: packages/digilens-packages.yml
+- type: LLMsTxt
+  url: llms/digilens-llms.txt
+- type: Conformance
+  url: conformance/digilens-conformance.yml
+- type: Lifecycle
+  url: lifecycle/digilens-lifecycle.yml
+
+x-enrichment:
+  date: '2026-08-01'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v1

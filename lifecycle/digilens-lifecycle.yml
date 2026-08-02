@@ -1,0 +1,67 @@
+generated: '2026-08-01'
+method: searched
+source: https://github.com/digilens-ar
+summary: >-
+  DigiLens versions its developer platform through DigiOS software builds shipped
+  over the air to ARGO devices, not through an HTTP API version. Sample projects
+  state a minimum DigiOS build and a matching Unity / Snapdragon Spaces SDK
+  version. No public status page, SLA, deprecation policy or dated changelog was
+  found; release notes sit behind the Cloudflare-protected developer portal.
+versioning:
+  scheme: device-os-build
+  identifier_format: B<major>.<minor>.<build>
+  examples:
+    - build: B1.0001.2098
+      referenced_by: https://github.com/digilens-ar/Gaze-Interaction-Sample
+      note: Minimum DigiOS build for the Snapdragon Spaces 1.0.1 gaze sample.
+    - build: B1.0001.2116
+      referenced_by: https://github.com/digilens-ar/Instructions-App
+      note: DigiOS build paired with Snapdragon Spaces Unity SDK 1.0.0.
+    - build: B1.0001.2145
+      referenced_by: https://github.com/digilens-ar/AndroidStatusDisplay
+      note: DigiOS build required by the Android status-display sample.
+  api_versioning: none
+  note: >-
+    There is no versioned HTTP API surface. Compatibility is expressed as
+    (DigiOS build) x (Snapdragon Spaces SDK version) x (Unity editor version) in
+    each sample repository's prerequisites.
+distribution:
+  channel: over-the-air
+  description: >-
+    DigiOS updates are delivered as OTA builds to ARGO devices; the developer
+    portal is described by DigiLens as the access point for DigiOS SDKs, OTAs
+    and APIs.
+  source: https://www.digilens.com/pr-msftintune/
+platform_continuity:
+  - program: ARGO Next
+    announced: '2025-10-07'
+    url: https://www.digilens.com/pr-argo-next/
+    description: >-
+      Migration program enabling customers on other XR devices (including
+      discontinued platforms such as HoloLens 2) to move workloads onto the ARGO
+      platform. This is DigiLens' published answer to third-party device
+      end-of-life, not a DigiLens deprecation policy.
+status_page:
+  published: false
+  probed:
+    - url: https://status.digilens.com/
+      result: no DNS / not reachable
+deprecation_policy:
+  published: false
+  sunset_header: unknown
+  note: >-
+    No RFC 8594 Sunset/Deprecation header behaviour applies — there is no HTTP
+    API. No published hardware or DigiOS end-of-life policy was found on the
+    public site.
+sla:
+  published: false
+support_lifecycle:
+  published: false
+  note: >-
+    Device support windows and DigiOS release notes are not published anonymously;
+    the developer portal (Zendesk help center) requires access.
+gaps:
+  - No public status page.
+  - No public dated changelog or release-notes feed.
+  - No published deprecation / end-of-life policy for DigiOS builds or ARGO hardware.
+  - No published SLA.
