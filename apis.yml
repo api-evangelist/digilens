@@ -13,6 +13,17 @@ description: 'DigiLens Inc. is a Sunnyvale, California company that designs and 
   DigiOS SDK and Qualcomm Snapdragon Spaces, with samples published in the digilens-ar
   GitHub organization and documentation on the DigiLens developer portal. DigiLens has
   raised a Series D led by Samsung Electronics at a valuation above $500M.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.digilens.com/wp-content/uploads/2021/03/LRG-Logo-White-Full-MAR21-207x39.png
 url: https://raw.githubusercontent.com/api-evangelist/digilens/refs/heads/main/apis.yml
 x-type: company
